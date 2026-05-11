@@ -44,7 +44,7 @@ async function sendCheckins() {
 
 // ── HANDLE REPLIES FROM FAMILY ───────────────────────────────
 app.post('/webhook', async (req, res) => {
-const from   = req.body.From.trim().replace(/"/g, '');
+const from = req.body.From;
 console.log('Received from:', from);
   const body   = req.body.Body?.trim().toUpperCase();
 
